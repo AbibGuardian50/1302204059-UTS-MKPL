@@ -32,11 +32,6 @@ public class Employee extends Person  {
 		this.isForeigner = Person;
 		this.gender = Person;
 	}
-	
-	/**
-	 * Fungsi untuk menentukan gaji bulanan pegawai berdasarkan grade kepegawaiannya (grade 1: 3.000.000 per bulan, grade 2: 5.000.000 per bulan, grade 3: 7.000.000 per bulan)
-	 * Jika pegawai adalah warga negara asing gaji bulanan diperbesar sebanyak 50%
-	 */
 	private static  int SalaryGrade1 = 3000000;
         private static  int SalaryGrade2 = 5000000;
         private static  int SalaryGrade3 = 7000000;
@@ -69,14 +64,7 @@ public class Employee extends Person  {
 	public void setAdditionalIncome(int income) {	
 		this.otherMonthlyIncome = income;
 	}
-        
-//        public void gradeSalary(int Salary) {
-//        }
-	
-//	public void setSpouse(String spouseName, String spouseIdNumber) {
-//		this.spouseName = spouseName;
-//		this.spouseIdNumber = idNumber;
-//	}
+
 	
 	
 	
