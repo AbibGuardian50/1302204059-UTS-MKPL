@@ -1,57 +1,36 @@
-package lib;
+package com.mycompany.utsmkpl;
 
+import com.mycompany.utsmkpl.TaxFunction;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Date;
 
-public class Employee {
+/**
+ *
+ * @author Coding
+ */
+public class Employee extends Person  {
 
 	private String employeeId;
-	private String firstName;
-	private String lastName;
-	private String idNumber;
-	private String address;
-	
-        //Primitive Obsession
+        
         private Date dateJoined;
-//	private int yearJoined;
-//	private int monthJoined;
-//	private int dayJoined;
         private Date monthWorkingInYear;
-
-	
-	private boolean isForeigner;
-        // primitive obsession
-        private enum JenisGender {
-            Laki_laki,
-            Perempuan
-        }
-	private JenisGender gender;
-	
+ 
 	private int monthlySalary;
 	private int otherMonthlyIncome;
 	private int annualDeductible;
-	
-	private String spouseName;
-	private String spouseIdNumber;
 
-	private List<String> childNames;
-	private List<String> childIdNumbers;
-	
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, Date dateJoined , boolean isForeigner,JenisGender gender) {
+    public Employee(String employeeId, String idNumber, Date dateJoined , person isForeigner, person Person) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstName = Person;
+		this.lastName = Person;
 		this.idNumber = idNumber;
-		this.address = address;
+		this.address = Person;
 		this.dateJoined = dateJoined;
-		this.isForeigner = isForeigner;
-		this.gender = gender;
-		
-		childNames = new LinkedList<String>();
-		childIdNumbers = new LinkedList<String>();
+		this.isForeigner = Person;
+		this.gender = Person;
 	}
 	
 	/**
@@ -86,15 +65,12 @@ public class Employee {
 		this.otherMonthlyIncome = income;
 	}
 	
-	public void setSpouse(String spouseName, String spouseIdNumber) {
-		this.spouseName = spouseName;
-		this.spouseIdNumber = idNumber;
-	}
+//	public void setSpouse(String spouseName, String spouseIdNumber) {
+//		this.spouseName = spouseName;
+//		this.spouseIdNumber = idNumber;
+//	}
 	
-	public void addChild(String childName, String childIdNumber) {
-		childNames.add(childName);
-		childIdNumbers.add(childIdNumber);
-	}
+	
 	
 	public int getAnnualIncomeTax() {
 		
