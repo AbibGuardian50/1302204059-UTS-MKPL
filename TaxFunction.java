@@ -1,4 +1,4 @@
-package lib;
+package com.mycompany.utsmkpl;
 
 public class TaxFunction {
 
@@ -14,14 +14,12 @@ public class TaxFunction {
 	 * 
 	 */
 	
+    
 	
 	public static int calculateTax(int monthlySalary, int otherMonthlyIncome, int numberOfMonthWorking, int deductible, boolean isMarried, int numberOfChildren) {
 		
 		int tax = 0;
-		
-		if (numberOfMonthWorking > 12) {
-			System.err.println("More than 12 month working per year");
-		}
+//                
 		
 		if (numberOfChildren > 3) {
 			numberOfChildren = 3;
@@ -38,7 +36,17 @@ public class TaxFunction {
 		}else {
 			return tax;
 		}
+                
+                printMonth(numberOfMonthWorking);
 			 
 	}
+        
+        
+        
+        public static void printMonth (int numberOfMonthWorking) {
+            if (numberOfMonthWorking > 12) {
+			System.err.println("More than 12 month working per year");
+		}
+}
 	
 }
