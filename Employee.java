@@ -14,11 +14,16 @@ public class Employee {
 	private String idNumber;
 	private String address;
 	
+        //Primitive Obsession
         private Date dateJoined;
+//	private int yearJoined;
+//	private int monthJoined;
+//	private int dayJoined;
         private Date monthWorkingInYear;
 
 	
 	private boolean isForeigner;
+        // primitive obsession
         private enum JenisGender {
             Laki_laki,
             Perempuan
